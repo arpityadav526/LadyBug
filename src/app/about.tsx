@@ -1,28 +1,28 @@
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { Pressable, StyleSheet, Text, useColorScheme, View } from 'react-native';
 
-export default function Home() {
+export default function About() {
+  const router = useRouter();
   const colorScheme = useColorScheme();
   const isDark = colorScheme === 'dark';
 
   return (
     <View style={StyleSheet.flatten([styles.container, { backgroundColor: isDark ? '#1a1a1a' : '#fff' }])}>
       <Text style={StyleSheet.flatten([styles.title, { color: isDark ? '#fff' : '#000' }])}>
-        LadyBug
+        About LadyBug
       </Text>
-      <Text style={StyleSheet.flatten([styles.subtitle, { color: isDark ? '#ccc' : '#666' }])}>
-        Welcome to the LadyBug app
+      <Text style={StyleSheet.flatten([styles.description, { color: isDark ? '#ccc' : '#666' }])}>
+        This is a simple app skeleton with routing built with Expo and Expo Router.
       </Text>
       
-      <Link href="/about" asChild>
-        <Pressable
-          style={StyleSheet.flatten([styles.button, { backgroundColor: isDark ? '#333' : '#007AFF' }])}
-        >
-          <Text style={StyleSheet.flatten([styles.buttonText, { color: isDark ? '#fff' : '#fff' }])}>
-            Go to About section 
-          </Text>
-        </Pressable>
-      </Link>
+      <Pressable
+        style={StyleSheet.flatten([styles.button, { backgroundColor: isDark ? '#333' : '#007AFF' }])}
+        onPress={() => router.back()}
+      >
+        <Text style={StyleSheet.flatten([styles.buttonText, { color: isDark ? '#fff' : '#fff' }])}>
+          Go Back
+        </Text>
+      </Pressable>
     </View>
   );
 }
@@ -35,13 +35,16 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: 'bold',
-    marginBottom: 8,
+    marginBottom: 16,
+    textAlign: 'center',
   },
-  subtitle: {
+  description: {
     fontSize: 16,
     marginBottom: 24,
+    textAlign: 'center',
+    lineHeight: 24,
   },
   button: {
     paddingVertical: 12,
