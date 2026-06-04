@@ -1,55 +1,31 @@
-import { Link } from 'expo-router';
-import { Pressable, StyleSheet, Text, useColorScheme, View } from 'react-native';
+import {Text , View , StyleSheet} from 'react-native';
+import { Link} from 'expo-router';
 
-export default function Home() {
-  const colorScheme = useColorScheme();
-  const isDark = colorScheme === 'dark';
-
-  return (
-    <View style={StyleSheet.flatten([styles.container, { backgroundColor: isDark ? '#1a1a1a' : '#fff' }])}>
-      <Text style={StyleSheet.flatten([styles.title, { color: isDark ? '#fff' : '#000' }])}>
-        LadyBug
-      </Text>
-      <Text style={StyleSheet.flatten([styles.subtitle, { color: isDark ? '#ccc' : '#666' }])}>
-        Welcome to the LadyBug app
-      </Text>
-      
-      <Link href="/about" asChild>
-        <Pressable
-          style={StyleSheet.flatten([styles.button, { backgroundColor: isDark ? '#333' : '#007AFF' }])}
-        >
-          <Text style={StyleSheet.flatten([styles.buttonText, { color: isDark ? '#fff' : '#fff' }])}>
-            Go to About section 
-          </Text>
-        </Pressable>
-      </Link>
-    </View>
-  );
+export default function App(){
+    return(
+        <View style={styles.container}>
+            <Text style={styles.text}>hellow ladybug</Text>
+            <Link href="/about" style={styles.button}>
+            Go to About Screen </Link>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#25292e',
     alignItems: 'center',
-    padding: 20,
+    justifyContent: 'center',
   },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    marginBottom: 8,
-  },
-  subtitle: {
-    fontSize: 16,
-    marginBottom: 24,
+  text: {
+    color: '#fff',
   },
   button: {
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 8,
-  },
-  buttonText: {
-    fontSize: 16,
-    fontWeight: '600',
+    backgroundColor: '#007AFF',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 20,
   },
 });
+
