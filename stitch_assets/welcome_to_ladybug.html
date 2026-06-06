@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welcome to LadyBug</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#fbf8ff",
+                    "secondary-fixed-dim": "#d1c5ac",
+                    "tertiary": "#286182",
+                    "on-primary-fixed": "#410007",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#b7102a",
+                    "surface-tint": "#bb152c",
+                    "surface-container-low": "#f4f2ff",
+                    "surface-variant": "#e0e0fc",
+                    "surface-bright": "#fbf8ff",
+                    "on-primary-fixed-variant": "#92001c",
+                    "surface-container-high": "#e6e6ff",
+                    "surface-dim": "#d7d8f4",
+                    "on-secondary-container": "#6b624d",
+                    "on-secondary-fixed": "#211b0b",
+                    "secondary-container": "#ebdfc4",
+                    "on-tertiary-container": "#fcfcff",
+                    "secondary": "#665e49",
+                    "tertiary-fixed": "#c7e7ff",
+                    "on-tertiary-fixed": "#001e2e",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e0e0fc",
+                    "inverse-on-surface": "#f1efff",
+                    "tertiary-fixed-dim": "#98cdf2",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#181a2e",
+                    "background": "#fbf8ff",
+                    "inverse-primary": "#ffb3b1",
+                    "primary-fixed": "#ffdad8",
+                    "on-primary-container": "#fffbff",
+                    "on-background": "#181a2e",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#447a9c",
+                    "on-secondary-fixed-variant": "#4e4633",
+                    "surface-container": "#edecff",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#5b403f",
+                    "primary-fixed-dim": "#ffb3b1",
+                    "on-tertiary-fixed-variant": "#064c6b",
+                    "outline-variant": "#e4bebc",
+                    "secondary-fixed": "#eee1c7",
+                    "primary-container": "#db313f",
+                    "outline": "#8f6f6e",
+                    "inverse-surface": "#2d2f44"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "lg": "24px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "container-margin": "20px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "xxl": "48px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "display": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-sm": ["10px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fbf8ff;
+            background-image: radial-gradient(circle at 2px 2px, rgba(183, 16, 42, 0.02) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface min-h-screen flex flex-col items-center justify-center p-container-margin overflow-x-hidden">
+<!-- Onboarding Container -->
+<main class="w-full max-w-[400px] flex flex-col items-center justify-between min-h-[751px] text-center relative">
+<!-- Top Logo Anchor -->
+<div class="mb-xl animate-fade-in">
+<h1 class="font-display text-display text-primary tracking-tighter">LadyBug</h1>
+</div>
+<!-- Premium Illustration Section -->
+<div class="relative w-full aspect-square max-w-[320px] flex items-center justify-center mb-xl">
+<!-- Background Decorative Circles -->
+<div class="absolute inset-0 bg-primary/5 rounded-full scale-110 blur-3xl -z-10"></div>
+<div class="relative w-full h-full glass-card rounded-[40px] shadow-sm flex items-center justify-center overflow-hidden">
+<img alt="Premium LadyBug Illustration" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out" data-alt="A sophisticated 3D digital illustration in a high-key minimalist style. A friendly red and black ladybug companion with large expressive eyes is carefully tending to a small, bright green sprout emerging from rich soil. The setting is a clean, airy room with soft morning sunlight casting gentle shadows. The color palette features warm creams, pristine whites, and vibrant primary red accents, creating a nurturing and premium academic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq7PCC8bXaDfXROfvY2ShjgQb-Ml2YjLheBz1hxFfS39DtOi7DkBzOLPTYJNMa-bb5ijb_cqNL8EBTMKRxv8duqssPQc6n7BcQ34fpbBLHbYW8HGZgmc9yt8fv8f0E62QDWBmR6XW5jOazzQCkX-HScliwu1LURC65Zk83_9uaOnpTovGZfuQE0pchiwKi-HX1UFI9cyZCwWqLzEyT2MwAPmdG2JZNSFAoTWRdkGLve1UXianDIv0Nq3LEOKHmOk_7MpHcabcFshrR"/>
+</div>
+<!-- Floating Achievement Badge (Micro-interaction element) -->
+<div class="absolute -bottom-4 -right-4 bg-surface-container-highest p-sm rounded-xl shadow-lg border border-black/5 animate-bounce" style="animation-duration: 3s;">
+<span class="material-symbols-outlined text-primary text-[32px]">emoji_events</span>
+</div>
+</div>
+<!-- Content Section -->
+<div class="space-y-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
+                Small Steps. <br/>
+<span class="text-primary">Big Success.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[280px] mx-auto leading-relaxed">
+                The premium companion for your academic journey.
+            </p>
+</div>
+<!-- Bottom Action Bar -->
+<div class="w-full mt-xxl space-y-md">
+<!-- Progress Indicator Dots -->
+<div class="flex justify-center gap-2 mb-md">
+<div class="h-1.5 w-6 rounded-full bg-primary transition-all duration-300"></div>
+<div class="h-1.5 w-2 rounded-full bg-outline-variant"></div>
+<div class="h-1.5 w-2 rounded-full bg-outline-variant"></div>
+</div>
+<button class="group relative w-full bg-primary text-on-primary py-lg rounded-xl font-headline-sm text-headline-sm shadow-xl shadow-primary/20 hover:scale-[0.98] active:scale-95 transition-all duration-200 overflow-hidden" id="nextBtn">
+<span class="relative z-10">Next</span>
+<div class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+</button>
+<button class="w-full py-md text-on-surface-variant font-label-lg text-label-lg hover:text-primary transition-colors">
+                Skip to Dashboard
+            </button>
+</div>
+</main>
+<!-- Decorative Mascot Line Art (Faint pattern) -->
+<div class="fixed bottom-[-50px] right-[-50px] opacity-[0.03] pointer-events-none -rotate-12">
+<span class="material-symbols-outlined text-[300px]">pest_control_rodent</span>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('nextBtn');
+            
+            // Subtle hover parallax for the illustration
+            const card = document.querySelector('.glass-card');
+            document.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 50;
+                card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            });
+
+            btn.addEventListener('click', () => {
+                btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span>';
+                setTimeout(() => {
+                    // Simulation of transition
+                    document.body.classList.add('opacity-0');
+                    document.body.style.transition = 'opacity 0.5s ease-out';
+                }, 300);
+            });
+        });
+    </script>
+</body></html>

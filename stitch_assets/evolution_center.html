@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LadyBug Evolution Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fbf8ff",
+                        "secondary-fixed-dim": "#d1c5ac",
+                        "tertiary": "#286182",
+                        "on-primary-fixed": "#410007",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#b7102a",
+                        "surface-tint": "#bb152c",
+                        "surface-container-low": "#f4f2ff",
+                        "surface-variant": "#e0e0fc",
+                        "surface-bright": "#fbf8ff",
+                        "on-primary-fixed-variant": "#92001c",
+                        "surface-container-high": "#e6e6ff",
+                        "surface-dim": "#d7d8f4",
+                        "on-secondary-container": "#6b624d",
+                        "on-secondary-fixed": "#211b0b",
+                        "secondary-container": "#ebdfc4",
+                        "on-tertiary-container": "#fcfcff",
+                        "secondary": "#665e49",
+                        "tertiary-fixed": "#c7e7ff",
+                        "on-tertiary-fixed": "#001e2e",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e0e0fc",
+                        "inverse-on-surface": "#f1efff",
+                        "tertiary-fixed-dim": "#98cdf2",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#181a2e",
+                        "background": "#fbf8ff",
+                        "inverse-primary": "#ffb3b1",
+                        "primary-fixed": "#ffdad8",
+                        "on-primary-container": "#fffbff",
+                        "on-background": "#181a2e",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#447a9c",
+                        "on-secondary-fixed-variant": "#4e4633",
+                        "surface-container": "#edecff",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#5b403f",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "on-tertiary-fixed-variant": "#064c6b",
+                        "outline-variant": "#e4bebc",
+                        "secondary-fixed": "#eee1c7",
+                        "primary-container": "#db313f",
+                        "outline": "#8f6f6e",
+                        "inverse-surface": "#2d2f44"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "container-margin": "20px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xxl": "48px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["10px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .polka-pattern {
+            background-image: radial-gradient(#b7102a 0.5px, transparent 0.5px);
+            background-size: 16px 16px;
+            opacity: 0.03;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top AppBar -->
+<header class="bg-surface/70 backdrop-blur-xl border-b border-black/5 shadow-sm docked full-width top-0 sticky z-50 flex justify-between items-center w-full px-container-margin py-md">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-container flex items-center justify-center">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional and friendly headshot of a young student with a warm smile, set against a soft-focus academic background. The lighting is bright and airy, maintaining the clean, modern light-mode aesthetic of the app. The color palette features natural skin tones and a subtle accent of primary red in the clothing to ensure brand cohesion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPHEGa6-0loDgl9ep0dMOcyhDI6uvrdYYkw5z5r1snriY_kWn0YquPybKn-4bkOoa5tOixJFxJuREfYcrVLgdMXXXIFZtdzB_bdmhd1WTna4AnSm6qEqhoCIMeoyOGXi4hppFTw92DRlyxFCLwWwIMbCklcLXruBCXQ_mqD179nQtA8VPEgs_dnOiC3QVE18g7dIaqiEejmyMQR_R0AXPIQ3yi1Jt9XXDUR2QWpcjVhcRImZI_X49aWoR9PpKJvPLNtFZ_4zEB8pey"/>
+</div>
+<h1 class="font-headline-md text-headline-md mobile:font-headline-lg-mobile mobile:text-headline-lg-mobile text-primary">Evolution Center</h1>
+</div>
+<button class="text-primary hover:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-headline-sm">notifications</span>
+</button>
+</header>
+<main class="px-container-margin mt-lg relative">
+<!-- Background Decoration -->
+<div class="fixed inset-0 polka-pattern pointer-events-none"></div>
+<!-- Evolution Stage Hero -->
+<section class="relative z-10 py-xl flex flex-col items-center">
+<div class="relative w-64 h-64 flex items-center justify-center mb-md">
+<!-- Aura/Glow effect -->
+<div class="absolute inset-0 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+<!-- Mascot Image -->
+<div class="relative z-20 animate-float">
+<img alt="Scholar Bug Mascot" class="w-48 h-48 object-contain drop-shadow-2xl" data-alt="A stylized, friendly ladybug character wearing tiny academic spectacles and a miniature graduation cap, designed with smooth 3D surfaces and a modern minimalist aesthetic. The mascot sits on a floating translucent platform, illuminated by soft cinematic studio lighting. The vibrant primary red of the ladybug's shell contrasts beautifully with a soft cream background, echoing the app's premium high-energy yet composed brand personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA16LSVYS-XLqwTZLvRKv_1g6bl0hLBU_exx5J_kauJDBtBvSZFWk4akwVQcKL4DR-DFOMaNDDlIpYsIsPwoORG_IaH6e2SRpdyVzwun4kiYMi4xkA8L7Q6lVD0RmZljE7cj6dluk7eE2YnwUraZXaGvvO_aGsSgzc_fEUUHUKP58ZwbrTZJHLENHaCaFDRIfQdK1VIuUWbnbcGNQ6IYlTFdjbIvJeX2o_M2iiFSFM9gmm-YYR4N8FVJHzUCM8c41C-XPnynYA_OCHc"/>
+</div>
+</div>
+<div class="text-center">
+<div class="inline-flex items-center gap-xs px-md py-1 rounded-full bg-primary/10 text-primary mb-sm">
+<span class="material-symbols-outlined text-body-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-md text-label-md">LEVEL 12</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-xs">Scholar Bug</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Keep studying to evolve into a "Dean's List Beetle"</p>
+</div>
+<!-- XP Progress Bar -->
+<div class="w-full max-w-md mt-lg px-md py-lg glass-card rounded-xl shadow-sm">
+<div class="flex justify-between items-end mb-sm">
+<span class="font-label-lg text-label-lg text-primary">XP PROGRESS</span>
+<span class="font-label-md text-label-md text-on-surface-variant">2,450 / 3,000 XP</span>
+</div>
+<div class="h-4 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[82%] rounded-full shadow-[0_0_12px_rgba(183,16,42,0.4)] relative">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-white/20"></div>
+</div>
+</div>
+<div class="mt-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-body-md">trending_up</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Only <span class="font-bold text-on-surface">550 XP</span> more to Level 13!</p>
+</div>
+</div>
+</section>
+<!-- Achievement Badges -->
+<section class="mt-xl">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-headline-sm text-headline-sm">Achievement Badges</h3>
+<button class="font-label-md text-label-md text-primary">View All</button>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<!-- Gold Badge -->
+<div class="glass-card p-md rounded-xl flex flex-col items-center text-center hover:scale-[0.98] transition-transform">
+<div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-sm shadow-inner">
+<span class="material-symbols-outlined text-amber-500 text-display" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<span class="font-label-md text-label-md text-amber-700 uppercase tracking-wider">Gold Tier</span>
+<h4 class="font-label-lg text-label-lg mt-xs">7 Day Streak</h4>
+</div>
+<!-- Blue Badge -->
+<div class="glass-card p-md rounded-xl flex flex-col items-center text-center hover:scale-[0.98] transition-transform">
+<div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-sm shadow-inner">
+<span class="material-symbols-outlined text-blue-500 text-display" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<span class="font-label-md text-label-md text-blue-700 uppercase tracking-wider">Blue Tier</span>
+<h4 class="font-label-lg text-label-lg mt-xs">Study Master</h4>
+</div>
+</div>
+</section>
+<!-- Streak Rewards -->
+<section class="mt-xl mb-xl">
+<h3 class="font-headline-sm text-headline-sm mb-md">Streak Rewards</h3>
+<div class="bg-primary p-md rounded-xl shadow-lg relative overflow-hidden">
+<!-- Decorative pattern -->
+<div class="absolute inset-0 polka-pattern opacity-10"></div>
+<div class="relative z-10 flex items-center gap-md">
+<div class="bg-white/20 p-sm rounded-lg backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-display">local_fire_department</span>
+</div>
+<div class="flex-1">
+<h4 class="text-white font-headline-sm">Streak: 12 Days</h4>
+<p class="text-white/80 font-body-sm">3 more days to unlock the "Super Sparkle" shell!</p>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-white/20 flex items-center justify-center">
+<span class="text-white font-bold">12</span>
+</div>
+</div>
+</div>
+<div class="mt-md flex gap-sm overflow-x-auto pb-sm no-scrollbar">
+<div class="flex-shrink-0 w-24 aspect-square glass-card rounded-lg flex flex-col items-center justify-center border-primary/20">
+<span class="material-symbols-outlined text-on-surface-variant">lock</span>
+<span class="font-label-sm text-label-sm mt-xs">Day 13</span>
+</div>
+<div class="flex-shrink-0 w-24 aspect-square glass-card rounded-lg flex flex-col items-center justify-center border-primary/20">
+<span class="material-symbols-outlined text-on-surface-variant">lock</span>
+<span class="font-label-sm text-label-sm mt-xs">Day 14</span>
+</div>
+<div class="flex-shrink-0 w-24 aspect-square bg-primary-fixed border-2 border-primary rounded-lg flex flex-col items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">card_giftcard</span>
+<span class="font-label-sm text-label-sm text-primary mt-xs">REWARD</span>
+</div>
+<div class="flex-shrink-0 w-24 aspect-square glass-card rounded-lg flex flex-col items-center justify-center border-primary/20">
+<span class="material-symbols-outlined text-on-surface-variant">lock</span>
+<span class="font-label-sm text-label-sm mt-xs">Day 16</span>
+</div>
+</div>
+</section>
+<!-- Primary Action Button (Evolution Hub) -->
+<div class="fixed bottom-24 right-container-margin z-40">
+<button class="bg-primary text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-95 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined">bolt</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface/70 backdrop-blur-xl border-t border-black/5 shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant hover:bg-surface-container-high transition-colors px-4 py-1 rounded-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant hover:bg-surface-container-high transition-colors px-4 py-1 rounded-full" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-sm text-label-sm">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant hover:bg-surface-container-high transition-colors px-4 py-1 rounded-full" href="#">
+<span class="material-symbols-outlined">timer</span>
+<span class="font-label-sm text-label-sm">Study</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-sm text-label-sm">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant hover:bg-surface-container-high transition-colors px-4 py-1 rounded-full" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for progression feedback
+        document.addEventListener('DOMContentLoaded', () => {
+            const mascot = document.querySelector('.animate-float');
+            mascot.addEventListener('click', () => {
+                mascot.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    mascot.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+    </script>
+</body></html>
